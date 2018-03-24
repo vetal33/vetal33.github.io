@@ -22,13 +22,14 @@ h2 {
 }
 .red {
     color: #ae1903;
+    text-transform: none;
 }
 .header_wide {
     width: 100%;
     background-color: #4e5d6c;
 
 }
-.header {
+.header, .footer_content {
     max-width: 980px;
     margin: 0 auto;
 
@@ -151,7 +152,6 @@ ul {
     font-size: 15px;
     line-height: 1.5;
     margin-top: 30px;
-
 }
 li {
     margin-top: 10px;
@@ -163,13 +163,90 @@ a {
 a:hover {
     color: #f76b1c;
 }
+.footer_content a {
+    text-decoration: none;
+    color: #b2b2b2;
+}
+.footer_content li {
+    list-style-type: none;
+}
+.footer_content a:hover {
+    cursor: pointer;
+    color: #f76b1c;
+}
+.footer_title{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: #b2b2b2;
+    border-bottom: 1px solid #4d4d4d;
+    font-size: 0.9em;
+}
+
+.email{
+    background:url("/img/if_mail_.jpg") no-repeat left center ;
+}
+.gram{
+    background:url("/img/if_gram_2.png") no-repeat left center ;
+}
+.download {
+    background:url("/img/if_github_.png") no-repeat left center;
+}
+.footer_content_left, .footer_content_midle {
+    min-width: 400px;
+    float: left;
+}
+.footer_content_:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.copyright {
+    color: #666666;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing:.07em;
+    margin-top: 143px;
+    margin-right: 150px;
+    float: left;
+}
+.heart_text {
+    color: #666666;
+    font-size: 13px;
+    float: right;
+    margin-top: 143px;
+    padding-left: 12px;
+    padding-right: 7px;
+}
 /*----------------------------Клас для фіксації верхнього меню*/
 .fixed{
-
     background: rgba(78, 93, 108, 1);
     position: fixed;
     top:0;
     left: 0;
     box-shadow: 0px 1px 10px -3px #000000;
     z-index: 100;
+}
+/*---------------------------------------------------------------Серце*/
+.heart {
+    position: relative;
+    width: .5em;
+    height: .5em;
+    margin-top: 144px;
+    background: #ae1903;
+    border-radius: 50%;
+    box-shadow: .4em 0 0 0 #ae1903;
+    float: right;
+
+}
+.heart:before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: .05em;
+    top: .4em;
+    border: .4em solid #ae1903;
+    border-bottom: 0;
+    border-color: #ae1903 transparent;
 }
